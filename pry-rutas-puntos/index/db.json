@@ -1,0 +1,138 @@
+{
+  "rutas": [],
+  "puntos": [
+    {
+      "id": 2,
+      "nombre": "Santa Marta",
+      "latitud": 11.24,
+      "longitud": -74.211,
+      "atractivo": [
+        "Parque Nacional Natural Tayrona",
+        "Playas",
+        "Sierra Nevada de Santa Marta"
+      ],
+      "comidaTipica": [
+        "Bollo de Yuca",
+        "Cazuela de Mariscos",
+        "Pargo Rojo Frito"
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Parque Nacional Natural Tayrona",
+      "latitud": 11.295,
+      "longitud": -74.075,
+      "atractivo": [
+        "Playas vírgenes",
+        "Tubing en el río",
+        "Paisajes naturales"
+      ],
+      "comidaTipica": [
+        "Pescado frito",
+        "Arroz con coco",
+        "Ensalada de frutas"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Palomino",
+      "latitud": 11.25,
+      "longitud": -73.397,
+      "atractivo": [
+        "Playas vírgenes",
+        "Tubing en el río",
+        "Paisajes naturales"
+      ],
+      "comidaTipica": [
+        "Pescado frito",
+        "Arroz con coco",
+        "Ensalada de frutas"
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Cabo de la Vela",
+      "latitud": 12.461,
+      "longitud": -71.641,
+      "atractivo": [
+        "Desierto de la Guajira",
+        "Playas",
+        "Paisajes áridos"
+      ],
+      "comidaTipica": [
+        "Cazuela de Cabra",
+        "Arroz con chipichipi",
+        "Frutas de la región"
+      ]
+    },
+    {
+      "nombre": "cartagena",
+      "latitud": "ldjgewñ",
+      "longitud": "141-",
+      "atractivo": [
+        "puerta de oro",
+        "mar"
+      ],
+      "comidaTipica": [
+        "boyac",
+        "alfkjd"
+      ],
+      "imagen": "",
+      "id": 6
+    },
+    {
+      "nombre": "asv",
+      "latitud": "433-",
+      "longitud": "eklfj",
+      "atractivo": [],
+      "comidaTipica": [],
+      "imagen": "",
+      "id": 7
+    },
+    {
+      "nombre": "asv",
+      "latitud": "151",
+      "longitud": "0958",
+      "atractivo": [
+        "SAF",
+        "DSGS"
+      ],
+      "comidaTipica": [
+        "sdg",
+        "dsgs"
+      ],
+      "imagen": "",
+      "id": 8
+    },
+    {
+      "nombre": "",
+      "latitud": "",
+      "longitud": "",
+      "atractivo": [
+        "",
+        ""
+      ],
+      "comidaTipica": [
+        "",
+        ""
+      ],
+      "imagen": "",
+      "id": 9
+    },
+    {
+      "nombre": "",
+      "latitud": "",
+      "longitud": "",
+      "atractivo": [
+        "",
+        ""
+      ],
+      "comidaTipica": [
+        "",
+        ""
+      ],
+      "imagen": "",
+      "id": 10
+    }
+  ]
+}

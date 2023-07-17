@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    
+  </head>
+<body>
+
+    <section id="seccion-rutas" class="m-5" >
+        <div class="d-flex justify-content-end mb-4">
+          <div class="form-outline">
+            <input data-target="#table_1" type="text" id="search_table_1" class="form-control" >
+            <label class="form-label" for="search_table_1" style="margin-left: 0px;">Search</label>
+          <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 47.2px;"></div><div class="form-notch-trailing"></div></div></div>
+          <button class="btn btn-primary btn-sm ml-3 me-5 rounded-start ripple-surface" type="button" data-target="#table_1" id="search-rutas-btn">
+            <i class="fa fa-plus"></i>
+          </button>
+          <button class="btn btn-primary btn-sm ml-3 rounded-circle ripple-surface" type="button" data-target="#table_1" id="añadir-rutas-btn"type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+            <i class="fa fa-plus"></i>
+          </button>
+        </div>
+        
+  <!-- Modal -->
+  <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- modal para añadir ruta -->
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+               <span class="input-group-text rounded-0">URL</span>
+               <input type="text" id="ipt-imagen-ruta" aria-label="First name" placeholder="Preferiblemente en JPG" class="form-control rounded-0" />
+           </div>
+           <div class="modal-body">
+                   <div class="mb-3">
+                     <label for="ipt-nombre-ruta" class="form-label">NOMBRE DE LA RUTA</label>
+                     <input type="text" class="form-control" id="ipt-nombre-ruta">
+                   </div>
+                   <div class="mb-3">
+                       <label for="ipt-descrip-ruta" class="form-label">DESCRIPCION</label>
+                       <input type="text" placeholder="max 15 caracteres" maxlength="15" class="form-control" id="ipt-desc-ruta">
+                     </div>
+
+                   <label for="ipt-duracion-ruta" class="form-label">DURACION</label>
+                   <div class="mb-3">
+                       <input type="text" class="form-control" id="ipt-duracion-ruta">
+                     </div>
+
+                   <div class="mb-3">
+
+                     <div class="input-group text-center">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="">ATRACTIVO TURISTICO</span>
+                      </div>
+                      <input type="text" class="form-control ipt-atractivo-ruta" placeholder="EJ: Playas">
+                      <input type="text" class="form-control ipt-atractivo-ruta" placeholder="EJ: Naturaleza">
+                    </div>
+                   </div>
+
+                   <p class="d-block">PUNTOS DE LA RUTA:</p>        
+                 <div class="mb-3 row row-cols-1 row-cols-sm-2 row-cols-xxl-3 g-3" id="check-rutas">
+                   <!-- aca se añaden las rutas disponibles -->
+               
+                 </div>  
+
+
+                 <div class="mb-3">
+                <label for="ipt-precio-ruta"
+                class="form-label">PRECIO</label>
+                <input type="text" class="form-control" id="ipt-precio-ruta" placeholder="dolares">
+              </div>
+               </div>
+               
+                  <div class="mb-3 ">
+                     <button type="button" class="btn btn-secondary"  data-mdb-dismiss="modal">Close</button>
+                   <button type="submit" class="btn btn-primary" id="form-ruta-btn">Listar</button>
+           </div>         
+         </div>
+       </div>
+ </div>
+        <hr class="mb-0">
+
+<div class="table-responsive text-center">
+<table class="table">
+<thead>
+<tr>
+<th style="cursor: pointer;" scope="col">
+    <i data-sort="field_0" class="table-editor__sort-icon fas fa-arrow-up"></i>
+    ID
+</th>
+<th scope="col">NOMBRE</th>
+<th scope="col">ATRACTIVO</th>
+<th scope="col">DURACION</th>
+<th scope="col">PRECIO</th>
+<th scope="col">FUNCIONES</th>
+</tr>
+</thead>
+      <tbody>
+        <!-- aqui se añaden las tablas -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div id="div-modal-editar">
+  <!-- aqui se añade el modal--> 
+</div>
+        
+
+
+
+
+<section id="seccion-puntos" class="m-5" >
+  <div class="d-flex justify-content-end mb-4">
+    <div class="form-outline">
+      <input data-target="#table_2" type="text" id="search_table_2" class="form-control" >
+      <label class="form-label" for="search_table_2" style="margin-left: 0px;">Search</label>
+    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 47.2px;"></div><div class="form-notch-trailing"></div></div></div>
+    <button class="btn btn-primary btn-sm ml-3 me-5 rounded-start ripple-surface" type="button" data-target="#table_2" id="search-puntos-btn">
+      <i class="fa fa-plus"></i>
+    </button>
+    <button class="btn btn-primary btn-sm ml-3 rounded-circle ripple-surface" type="button" data-target="#modalPuntos" id="añadir-puntos-btn"type="button"  data-mdb-toggle="modal" data-mdb-target="#modalPuntos">
+      <i class="fa fa-plus"></i>
+    </button>
+  </div>
+  
+<!-- Modal -->
+<div class="modal" id="modalPuntos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- modal para añadir puntos -->
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+         <span class="input-group-text rounded-0">URL</span>
+         <input type="text" id="ipt-imagen-punto" aria-label="First name" placeholder="Preferiblemente en JPG" class="form-control rounded-0" />
+     </div>
+     <div class="modal-body">
+             <div class="mb-3">
+               <label for="ipt-nombre-punto" class="form-label">NOMBRE DEl PUNTO</label>
+               <input type="text" class="form-control" id="ipt-nombre-punto">
+             </div>
+             <div class="mb-3">
+                 <label for="ipt-lat-punto" class="form-label">LATITUD</label>
+                 <input type="text"  class="form-control" id="ipt-lat-punto">
+               </div>
+
+             <label for="ipt-long-punto" class="form-label">LONGITUD</label>
+             <div class="mb-3">
+                 <input type="text" class="form-control" id="ipt-long-punto">
+               </div>
+
+             <div class="mb-3">
+
+               <div class="input-group text-center">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" >ATRACTIVO TURISTICO</span>
+                </div>
+                <input type="text" class="form-control ipt-atractivo-punto" placeholder="EJ: Sierra Nevada">
+                <input type="text" class="form-control ipt-atractivo-punto" placeholder="EJ: Tayrona">
+              </div>
+             </div>
+
+             <div class="input-group text-center">
+              <div class="input-group-prepend">
+                <span class="input-group-text" >COMIDA TIPICA</span>
+              </div>
+              <input type="text" class="form-control ipt-comida-punto" placeholder="EJ: Bollo de Yuca">
+              <input type="text" class="form-control ipt-comida-punto" placeholder="EJ: Cazuela de mariscos">
+            </div>
+           </div>
+
+         
+            <div class="mb-3 ">
+               <button type="button" class="btn btn-secondary"  data-mdb-dismiss="modal">Close</button>
+             <button type="submit" class="btn btn-primary" id="form-puntos-btn">Listar</button>
+     </div>         
+   </div>
+ </div>
+</div>
+  <hr class="mb-0">
+
+<div class="table-responsive text-center">
+<table class="table">
+<thead>
+<tr>
+<th style="cursor: pointer;" scope="col">
+<i data-sort="field_0" class="table-editor__sort-icon fas fa-arrow-up"></i>
+ID
+</th>
+<th scope="col">NOMBRE</th>
+<th scope="col">ATRACTIVO</th>
+<th scope="col">DURACION</th>
+<th scope="col">PRECIO</th>
+<th scope="col">FUNCIONES</th>
+</tr>
+</thead>
+<tbody>
+  <!-- aqui se añaden las tablas -->
+</tbody>
+</table>
+</div>
+</section>
+
+<div id="div-modal-editar-puntos">
+<!-- aqui se añade el modal--> 
+</div>
+
+
+
+
+      
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"
+></script>
+<script defer src="./index.js" type="module"></script>
+</body>
+</html>
